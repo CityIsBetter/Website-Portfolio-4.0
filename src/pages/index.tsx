@@ -1,6 +1,8 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.scss";
 import Curve from "@/components/Curve";
+import Landing from "@/components/Home/Landing";
+import Description from "@/components/Home/Description";
 
 export default function Home() {
   return (
@@ -13,7 +15,8 @@ export default function Home() {
       </Head>
       <Curve>
         <main className={styles.main}>
-        Home
+          <Landing />
+          <Description />
         </main>
       </Curve>
     </>

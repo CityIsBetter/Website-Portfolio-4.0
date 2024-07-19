@@ -1,0 +1,127 @@
+.Landing{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+    .header_bg{
+        background: radial-gradient(50% 50% at 50% 50%, #5E6FDD 0%, #4D61DF 74.21%, #455CE9 100%);
+    
+        .parallaxContainer{
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+
+            img{
+              margin-top: 20vh;
+              max-height: 80vh;
+              object-fit: contain;
+              user-select: none;
+              width: 700px;
+              filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+              @media (max-width: 530px){
+                margin-top: 25vh;
+              }
+              @media (max-width: 460px){
+                margin-top: 30vh;
+              }
+              @media (max-width: 390px){
+                margin-top: 35vh;
+              }
+            }
+        }
+    }
+    .phraseContainer{
+      display: flex;
+      justify-content: flex-end;
+      transform: translate(0%, -350%);
+      @media (max-width: 1200px){
+          display: none;
+        }
+      .phraseSvg{
+        display: flex;
+        transform: translate(-50%, -150%);
+      }
+    
+      .phrase{
+        color: black;
+        font-size: 24px;
+        display: flex;
+        max-width: 500px;
+        
+        p{
+        display: flex;
+        flex-wrap: wrap;
+        //overflow: hidden;
+        
+          &:nth-of-type(1){
+            gap: 8px;
+            line-height: 1.2;
+  
+            span{
+                margin-right: 3px;
+            }
+  
+            .mask{
+                position: relative;
+                overflow: hidden;
+                display: inline-flex;
+            }
+        }
+  
+        &:nth-of-type(2){
+            font-size: 18px;
+            width: 80%;
+            font-weight: 300;
+        }
+        }
+      }
+    }
+    .location{
+      position: absolute;
+      top: calc(40%);
+      @media (max-width:500px) {
+        top: 15%;
+      }
+    }
+
+    img{
+        object-fit: cover;
+    }
+
+    .sliderContainer{
+        position: absolute;
+        top: calc(100vh - 295px);
+        user-select: none;
+
+        @media (max-width: 1200px){
+          top: calc(100vh - 180px);
+        }
+      }
+      
+      .slider{
+        position: relative;
+        white-space: nowrap;
+      }
+      
+      .slider p{
+        position: relative;
+        margin: 0px;
+        color: white;
+        font-size: 256px;
+        font-weight: 300;
+        padding-right: 50px;
+
+        @media (max-width: 1200px) {
+          font-size: 156px;
+        }
+      }
+      
+      .slider p:nth-of-type(2){
+        position: absolute;
+        left: 100%;
+        top: 0;
+      }
+  }
