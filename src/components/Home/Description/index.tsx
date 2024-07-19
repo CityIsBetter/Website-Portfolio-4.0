@@ -72,10 +72,9 @@ const Description = forwardRef(function index(props, ref) {
             </p>
             <div data-scroll data-scroll-speed={0.1}>
               
-              <Link href={"/About"}><Magnetic><div ref={ref} className={styles.button}>About Me</div></Magnetic></Link>
+              <Link href={"/About"}><Magnetic><div className={styles.button}>About Me</div></Magnetic></Link>
             </div>
           </div>
-          <Line scolor={`#000`} w={.85}/>
           <div ref={descriptionW} className={styles.contentWorks}>
             <div className={styles.wTitle}>
               My <br/>Projects
@@ -87,7 +86,7 @@ const Description = forwardRef(function index(props, ref) {
             }</p>
           </div>
           <div data-scroll data-scroll-speed={0.1} className={styles.wButton}>
-              <Link href={"/Works"}><Magnetic><div ref={ref} className={styles.button}>My Works</div></Magnetic> </Link>             
+              <Link href={"/Works"}><Magnetic><div className={styles.button}>My Works</div></Magnetic> </Link>             
           </div>  
         </div>
     </div>

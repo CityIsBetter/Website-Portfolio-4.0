@@ -54,7 +54,7 @@ const Landing = () => {
 
       // Cleanup function to stop the animation when the component unmounts
       return () => {
-        cancelAnimationFrame(animationFrameId);
+        cancelAnimationFrame(animationFrameId!);
       };
     }, []);
   
