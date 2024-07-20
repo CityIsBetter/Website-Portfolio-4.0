@@ -48,7 +48,7 @@ export default function About() {
                 <span className={styles.span}>Always growing and learning...</span>
               </p>
               <div className={styles.imgContainer}>
-                <Image alt='portrait' src='/assets/temp.JPG' layout='fill' objectFit='cover' />
+                <Image alt='portrait' src='/assets/temp.JPG' width={300} height={500} />
               </div>
             </div>
           </div>
