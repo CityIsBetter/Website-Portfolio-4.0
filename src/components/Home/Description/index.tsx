@@ -29,7 +29,7 @@ export default function Description() {
             </p>
             <div data-scroll data-scroll-speed={0.1}>
               
-              <Link href={"/About"}><Magnetic><div className={styles.button}>About Me</div></Magnetic></Link>
+              <Link href={"/about"}><Magnetic><div className={styles.button}>About Me</div></Magnetic></Link>
             </div>
           </div>
           <Line scolor={`#000`} w={.85} sright={0}/>
@@ -44,7 +44,7 @@ export default function Description() {
             }</p>
           </div>
           <div data-scroll data-scroll-speed={0.1} className={styles.wButton}>
-              <Link href={"/Works"}><Magnetic><div className={styles.button}>My Works</div></Magnetic> </Link>             
+              <Link href={"/projects"}><Magnetic><div className={styles.button}>My Works</div></Magnetic> </Link>             
           </div>  
         </div>
     </div>

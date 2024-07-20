@@ -6,6 +6,8 @@ import Magnetic from '@/components/Magnetic';
 import Line from '@/components/Line';
 import { slideUp } from '@/components/anim/anim';
 import Image from 'next/image';
+import Resume from './Resume';
+import Contact from '@/components/Contact';
 
 export default function About() {
   const phraseAContainer = useRef(null);
@@ -15,7 +17,7 @@ export default function About() {
 
   return (
     <Curve>
-      <main>
+      <main className={styles.main}>
         <div className={styles.about}>
           <div className={styles.aboutContainer}>
             <div className={styles.heading}>About <span>Mahesh Paul</span></div>
@@ -47,12 +49,14 @@ export default function About() {
                 <br />
                 <span className={styles.span}>Always growing and learning...</span>
               </p>
-              <div className={styles.imgContainer}>
+              {/* <div className={styles.imgContainer}>
                 <Image alt='portrait' src='/assets/temp.JPG' width={300} height={500} />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
+        <Resume />
+        <Contact />
       </main>
     </Curve>
   );

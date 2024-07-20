@@ -1,14 +1,16 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import styles from './style.module.scss';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Lenis from 'lenis'
 
 export default function Landing() {
   const firstText = useRef<HTMLParagraphElement>(null);
   const secondText = useRef<HTMLParagraphElement>(null);
   const slider = useRef<HTMLParagraphElement>(null);
+  const container = useRef<HTMLParagraphElement>(null);
   const directionRef = useRef<number>(-1);
   const xPercentRef = useRef<number>(0);
 
@@ -46,10 +48,27 @@ export default function Landing() {
     });
   }, [animation]);
 
+  useEffect(() => {
+    const lenis = new Lenis()
+    function raf(time: number) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  }, [])
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end start']
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "25vh"]);
+
   return (
-    <main className={styles.Landing}>
+    <main className={styles.Landing} ref={container}>
       <div className={styles.header_bg}>
-        <motion.div className={styles.parallaxContainer}>
+        <motion.div className={styles.parallaxContainer} style={{y}}>
           <Image src='/assets/profile.png' alt='profile' draggable={false} fill={true} loading='eager' />
         </motion.div>
         <svg width="184" height="80" viewBox="0 0 184 80" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.location}>
