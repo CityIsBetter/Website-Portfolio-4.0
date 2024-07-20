@@ -8,7 +8,7 @@ import { slideUp } from '@/components/anim/anim';
 import Image from 'next/image';
 import Resume from './Resume';
 import Contact from '@/components/Contact';
-import { Head } from 'next/document';
+import Head from 'next/head';
 
 export default function About() {
   const phraseAContainer = useRef(null);
@@ -22,7 +22,7 @@ export default function About() {
         <title>Mahesh Paul | About</title>
         <meta name="description" content="Mahesh Paul's Website Portfolio, About Page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
     <Curve>
       <main className={styles.main}>

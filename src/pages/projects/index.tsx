@@ -7,7 +7,7 @@ import Project from './project'
 import Magnetic from '@/components/Magnetic'
 import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { slideUp } from '@/components/anim/anim'
-import { Head } from 'next/document'
+import Head from 'next/head';
 
 export default function Projects() {
 
