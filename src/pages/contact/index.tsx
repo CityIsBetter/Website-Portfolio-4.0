@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
         <main className={styles.contact}>
           <div className={styles.contactContainer} ref={container}>
             <div className={styles.Heading}>
-              <div className={styles.Title}>Let's Have<br /> a Chat Together</div>
+              <div className={styles.Title}>Let&apos;s Have<br /> a Chat Together</div>
               <Line scolor={"#eee"} w={.8} sright={0} />
               <motion.div style={{ x }} className={styles.buttonContainer}>
                 <Magnetic>
