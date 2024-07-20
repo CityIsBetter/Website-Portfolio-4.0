@@ -45,7 +45,7 @@ export default function Projects() {
                 <br/>
                 <br/>
                 <br/>
-                <span>Constantly creating and developing ideas...</span>
+                <span className={styles.span}>Constantly creating and developing ideas...</span>
               </p>
               </div>
             </div>
