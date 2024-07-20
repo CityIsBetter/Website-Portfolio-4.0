@@ -27,7 +27,7 @@ const Contact = () => {
                     <h2>a Chat</h2>
                     <div className={styles.line}><Line scolor={"#fff"} sright={100} w={.8}/></div>
                     <motion.div style={{x}} className={styles.buttonContainer}>
-                        <Link href={"/Contact"}><Magnetic>
+                        <Link href={"/contact"}><Magnetic>
                             <div className={styles.button}>
                                 <p>Get in touch </p>
                             </div>

@@ -48,7 +48,7 @@
                             inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
                             inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2),
                             0px 0px 0px 2px rgba(255, 255, 255, 0.2),
-                            0px 0px 90px 0px #334BD3;
+                            0px 0px 90px 0px #334bd362;
 
                 background: linear-gradient(0deg,#455CE9,#334BD3);
                 background-color: #455CE9;
@@ -59,6 +59,47 @@
                 max-width: 150px;
             }
         }
+        .wbutton {
+            cursor: pointer;
+            position: relative;
+            padding: 20px 42px;
+            font-size: 18px;
+            color: black;
+            border: 2px solid black;
+            border-radius: 34px;
+            background-color: transparent;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            overflow: hidden;
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                margin: auto;
+                width: 70px;
+                height: 70px;
+                border-radius: inherit;
+                scale: 0;
+                z-index: -1;
+                background-color: #455CE9;
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+              }
+              
+              &:hover::before {
+                scale: 3;
+              }
+              
+              &:hover {
+                color: #fff;
+                scale: 1.1;
+                border-color: white;
+                box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+              }
+              
+              &:active {
+                scale: 1;
+              }
+          }
     }
 
     p{

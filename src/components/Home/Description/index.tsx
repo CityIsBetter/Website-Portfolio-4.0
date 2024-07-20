@@ -44,7 +44,7 @@ export default function Description() {
             }</p>
           </div>
           <div data-scroll data-scroll-speed={0.1} className={styles.wButton}>
-              <Link href={"/projects"}><Magnetic><div className={styles.button}>My Works</div></Magnetic> </Link>             
+              <Link href={"/projects"}><Magnetic><div className={styles.wbutton}>My Works</div></Magnetic> </Link>             
           </div>  
         </div>
     </div>

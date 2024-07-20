@@ -16,6 +16,9 @@
         height: 100%;
         box-sizing: border-box;
         justify-content: space-between;
+        @media (max-width: 500px){
+            padding: 50px;
+        }
 
         .nav{
             display: flex;
@@ -46,6 +49,9 @@
         font-size: 12px;
         gap: 40px;
 
+        @media (max-width: 500px){
+            gap: 20px;
+        }
         a{
             text-decoration: none;
             color: white;

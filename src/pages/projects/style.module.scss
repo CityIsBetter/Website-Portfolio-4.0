@@ -3,7 +3,7 @@
 }
 
 .projects{
-    background-color: #292929;
+    background-color: #4C3BCF;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,10 +11,19 @@
     .projectContainer{
         width: 80%;
         margin-top: 200px;
+        @media (max-width: 640px){
+            margin-top: 120px;
+            width: 90%;
+        }
         .title{
             font-size: 96px;
             color: white;
             width: 80%;
+
+            @media (max-width: 768px){
+                margin-bottom: 50px;
+                font-size: 64px;
+            }
         }
         .content{
             display: flex;
@@ -24,6 +33,11 @@
             margin-bottom: 100px;
             color: white;
             font-size: 32px;
+
+            @media (max-width: 600px){
+                margin-top: 100px;
+                font-size: 24px;
+            }
             p{
                 flex-wrap: wrap;
                 font-weight: 200;
@@ -64,7 +78,7 @@
         .button{
             width: 180px;
             height: 180px;
-            background-color: #455CE9;
+            background-color: #333;
             color: white;
             border-radius: 50%;
             position: absolute;
@@ -75,13 +89,22 @@
             padding: 0px;
             z-index: 5;
             transition: box-shadow 0.4s;
+            @media (max-width: 768px){
+                width: 120px;
+                height: 120px;
+                margin-top: 30px;
+                svg{
+                    width: 70px;
+                    height: 50px;
+                }
+            }
 
                 &:hover {
-                    background: linear-gradient(0deg,#455CE9,#334BD3);
+                    background: linear-gradient(0deg,#333,#3e3e3e);
                     box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
                     inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2),
                     0px 0px 0px 2px rgba(255, 255, 255, 0.2),
-                    0px 0px 90px 0px #334BD3;
+                    0px 0px 90px 0px #3333336c;
                     transform: translateY(-2px);
                   }
             p{
@@ -91,6 +114,20 @@
                 z-index: 2;
                 position: relative;
             }
+        }
+    }
+    .circleContainer{
+        position: relative;
+        width: 100%;
+        .circle{
+            height: 1550%;
+            width: 120%;
+            left: -10%;
+            border-radius: 0 0 50% 50%;
+            background-color: white;
+            z-index: 1;
+            position: absolute;
+            box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
         }
     }
 }

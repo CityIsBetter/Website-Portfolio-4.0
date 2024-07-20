@@ -2,13 +2,17 @@
     position: relative;
     display: flex;
     align-items: center;
-    
+    justify-content: flex-start;
+    gap: 30px;
+    @media (max-width: 500px){
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
     .indicator{
         width: 10px;
         height: 10px;
         background-color: white;
         border-radius: 50%;
-        position: absolute;
         left: -30px;
     }
 }

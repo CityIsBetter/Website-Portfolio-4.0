@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Lenis from 'lenis'
 
 export default function Landing() {
   const firstText = useRef<HTMLParagraphElement>(null);
@@ -47,16 +46,6 @@ export default function Landing() {
       x: '-500px',
     });
   }, [animation]);
-
-  useEffect(() => {
-    const lenis = new Lenis()
-    function raf(time: number) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
-  }, [])
 
   const { scrollYProgress } = useScroll({
     target: container,
