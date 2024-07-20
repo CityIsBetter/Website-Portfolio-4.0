@@ -1,55 +1,12 @@
-import React, { forwardRef } from 'react'
-import { useInView, motion } from 'framer-motion';
-import { useRef } from 'react';
-import Link from 'next/link';
-
-import styles from './style.module.scss';
+import { motion, useInView } from 'framer-motion';
+import React, { useRef } from 'react'
+import styles from './style.module.scss'
 import { slideUp } from '@/components/anim/anim';
-import Line from '@/components/Line';
 import Magnetic from '@/components/Magnetic';
+import Link from 'next/link';
+import Line from '@/components/Line';
 
-import Router from 'next/router'
-
-// export const fixTimeoutTransition = (timeout) => {
-//   Router.events.on('beforeHistoryChange', () => {
-//     // Create a clone of every <style> and <link> that currently affects the page. It doesn't matter
-//     // if Next.js is going to remove them or not since we are going to remove the copies ourselves
-//     // later on when the transition finishes.
-//     const nodes = document.querySelectorAll('link[rel=stylesheet], style:not([media=x])')
-//     const copies = [...nodes].map((el) => el.cloneNode(true))
-
-//     for (let copy of copies) {
-//       // Remove Next.js' data attributes so the copies are not removed from the DOM in the route
-//       // change process.
-//       copy.removeAttribute('data-n-p')
-//       copy.removeAttribute('data-n-href')
-
-//       // Add duplicated nodes to the DOM.
-//       document.head.appendChild(copy)
-//     }
-
-//     const handler = () => {
-//       // Emulate a `.once` method using `.on` and `.off`
-//       Router.events.off('routeChangeComplete', handler)
-
-//       window.setTimeout(() => {
-//         for (let copy of copies) {
-//           // Remove previous page's styles after the transition has finalized.
-//           document.head.removeChild(copy)
-//         }
-//       }, timeout)
-//     }
-
-//     Router.events.on('routeChangeComplete', handler)
-//   })
-// }
-
-// fixTimeoutTransition(1000)
-
-
-
-const Description = forwardRef(function index(props, ref) {
-
+export default function Description() {
   const phraseA = "CSE student at SRM University, Kattankulathur with a passion for technology. Possesses strong foundational skills in Python, C, and web development gained through coursework and personal projects. ";
   const phraseW = "I dive into web development, Python, Java, C and Database projects with enthusiasm, driven by my own curiosity and passion for technology. My goal is to continuously learn and innovate, creating impactful solutions through my projects.";
   
@@ -75,6 +32,7 @@ const Description = forwardRef(function index(props, ref) {
               <Link href={"/About"}><Magnetic><div className={styles.button}>About Me</div></Magnetic></Link>
             </div>
           </div>
+          <Line scolor={`#000`} w={.85} sright={0}/>
           <div ref={descriptionW} className={styles.contentWorks}>
             <div className={styles.wTitle}>
               My <br/>Projects
@@ -92,5 +50,3 @@ const Description = forwardRef(function index(props, ref) {
     </div>
   )
 }
-)
-export default Description
