@@ -1,0 +1,41 @@
+.slidingImages{
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+    padding-bottom: 100px;
+    overflow: hidden;
+
+    .slider{
+        display: flex;
+        position: relative;
+        gap: 3vw;
+        width: 120vw;
+        left: -10vw;
+        @media (max-width:1200px) {
+            left: -200px;
+        }
+        
+        .project{
+            width: 25%;
+            height: 20vw;
+            min-height: 150px;
+            min-width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .imageContainer{
+                position: relative;
+                width: 80%;
+                height: 80%;
+                
+                img{
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

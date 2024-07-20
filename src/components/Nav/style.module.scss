@@ -1,18 +1,20 @@
 .menu{
-    height: 100vh;
-    background-color: rgb(41, 41, 41);
     position: fixed;
     right: 0;
     top: 0;
-    color: white;
+    height: 100vh;
     max-width: 100vw;
-    z-index: 10;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    z-index: 9;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .75);
+
     .body{
-        box-sizing: border-box;
-        height: 100%;
-        padding: 100px;
+        padding: 100px 50px 100px 100px;
         display: flex;
         flex-direction: column;
+        height: 100%;
+        box-sizing: border-box;
         justify-content: space-between;
 
         .nav{
@@ -29,23 +31,44 @@
                 font-size: 11px;
                 margin-bottom: 40px;
             }
-
             a{
                 text-decoration: none;
                 color: white;
                 font-weight: 300;
             }
-            
         }
     }
     .footer{
+
         display: flex;
         width: 100%;
         justify-content: space-between;
         font-size: 12px;
         gap: 40px;
+
         a{
+            text-decoration: none;
             color: white;
+            font-weight: 100;
+            font-size: 16px;
+            &::after{
+                content: "";
+                width: 0%;
+                height: 1px;
+                background-color: white;
+                display: block;
+                margin-top: 2px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: width 0.2s linear;
+            }
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
         }
+
     }
 }

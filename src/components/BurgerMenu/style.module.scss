@@ -1,51 +1,63 @@
-.button{
+.buttonContainer{
     position: fixed;
-    right: 0px;
+    right: 0; 
+    z-index: 12;
+    transform: scale(0);
+}
+.button{
+    right: 0;
     margin: 20px;
-    z-index: 11;
     width: 80px;
     height: 80px;
+
+    background-color: #333;;
     border-radius: 50%;
-    background-color: #455CE9;
-    cursor: pointer;
+
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid #3e3e3e;
-}
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-.burger{
-    width: 100%;
-    &::after, &::before{
-        content: "";
-        display: block;
-        height: 1px;
-        width: 40%;
-        margin: auto;
-        background-color: white;
-        position: relative;
-        transition: transform 0.3s;
-    }
-
-    &::after{
-        top: -5px;
-    }
-
-    &::before{
-        top: 5px;
-    }
-}
-
-.burgerActive{
-
-    &::after{
-        transform: rotate(45deg);
-        top: -1px;
-    }
-
-    &::before{
-        transform: rotate(-45deg);
-        top: 0px;
-    }
+    transition: background-color 0.3s ease-in-out;
     
+
+    .burger{
+        width: 100%;
+        &::after, &::before{
+            content: "";
+            display: block;
+            width: 40%;
+            background-color: white;
+            height: 1px;
+            margin: auto;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &::after{
+            top: -5px;
+        }
+
+        &::before{
+            top: 5px;
+        }
+    }
+
+    .burgerActive{
+        &::after{
+            top: -1px;
+            transform: rotate(45deg);
+        }
+        &::before{
+            top: 0px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &:hover{
+        background-color: #455CE9;
+        border: 2px solid #333;
+    }
 }

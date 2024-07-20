@@ -1,67 +1,64 @@
 import React, { useState } from 'react'
-import styles from './style.module.scss';
+import styles from './style.module.scss'
+import Rlink from './Link'
 import { motion } from 'framer-motion';
+import Magnetic from '@/components/Magnetic';
 import { usePathname } from 'next/navigation';
 import { menuSlide } from '../BurgerMenu/anim';
-import RLink from './Link';
 import Curve from './Curve';
 
 const navItems = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Projects",
-    href: "/projects",
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-  },
+    {
+        title: "Home",
+        href: "/"
+    }, 
+    {
+        title: "Projects",
+        href: "/projects"
+    },
+    {
+        title:"About",
+        href: "/about"
+    },
+    {
+        title:"Contact",
+        href:"/contact"
+    }
 ]
 
-export default function Nav() {
+const Nav = ({close} : {close: any}) => {
 
-  const pathname = usePathname();
-  const [selectedIndicator, setSelectedIndicator] = useState(pathname);
-
+    const pathname = usePathname();
+    const [selectedIndicator, setSelectedIndicator] = useState(pathname);
+    
   return (
-    <motion.div 
-      variants={menuSlide} 
-      initial="initial" 
-      animate="enter" 
-      exit="exit" 
-      className={styles.menu}
-      >
-       <div className={styles.body}>
+    <motion.div
+    variants={menuSlide} 
+    initial="initial" 
+    animate="enter" 
+    exit="exit" 
+    className={styles.menu}>
+        <div className={styles.body}>
             <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
-                    <div className={styles.header}>
-                        <p>Navigation</p>
-                    </div>
+                <div className={styles.header}>
+                    <p>Navigation</p>
+                </div>
                     {
-                      navItems.map( (data, index) => {
-                        return <RLink 
-                        key={index} 
-                        data={{...data, index}} 
-                        isActive={selectedIndicator == data.href} 
-                        setSelectedIndicator={setSelectedIndicator}>
-                        </RLink>
-                      })
-                    }
+                        navItems.map((item, index) => {
+                            return <Rlink key={index} data={{...item, index}} isActive={selectedIndicator == item.href} setSelectedIndicator={setSelectedIndicator} Click={close}/>
+                        }) 
+                    }            
             </div>
             <div className={styles.footer}>
-                <a>Awwwards</a>
-                <a>Instagram</a>
-                <a>Dribble</a>
-                <a>LinkedIn</a>
+                <Magnetic><a href='https://github.com/CityIsBetter/' target='_blank'>Github</a></Magnetic>
+                <Magnetic><a href='https://instagram.com/mahesh_paul_j' target='_blank'>Instagram</a></Magnetic>
+                <Magnetic><a href='https://discordapp.com/users/509270434303311872' target='_blank'>Discord</a></Magnetic>
+                <Magnetic><a href='https://linkedin.com/in/mahesh-paul' target='_blank'>LinkedIn</a></Magnetic>   
             </div>
         </div>
         <Curve />
     </motion.div>
   )
 }
+
+export default Nav

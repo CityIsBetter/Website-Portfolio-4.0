@@ -39,7 +39,7 @@ const Navbar = () => {
               </div>
             </Magnetic>
             <AnimatePresence mode='wait'>
-            { isActive && <Nav />}</AnimatePresence>
+            { isActive && <Nav close={undefined} />}</AnimatePresence>
       </div>
     </div>
   )

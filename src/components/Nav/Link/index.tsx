@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { slide, scale } from '../../BurgerMenu/anim';
 
-export default function RLink({data, isActive, setSelectedIndicator} : {data: any, isActive: boolean, setSelectedIndicator: any}) {
+export default function RLink({data, isActive, setSelectedIndicator, Click} : {data: any, isActive: boolean, setSelectedIndicator: any, Click: any}) {
   
     const { title, href, index} = data;
   
@@ -22,7 +22,7 @@ export default function RLink({data, isActive, setSelectedIndicator} : {data: an
           animate={isActive ? "open" : "closed"} 
           className={styles.indicator}>
         </motion.div>
-        <Link href={href}>{title}</Link>
+        <Link href={href} onClick={Click}>{title}</Link>
       </motion.div>
     )
 }
