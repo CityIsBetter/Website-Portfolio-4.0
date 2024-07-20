@@ -8,6 +8,7 @@ import { slideUp } from '@/components/anim/anim';
 import Image from 'next/image';
 import Resume from './Resume';
 import Contact from '@/components/Contact';
+import { Head } from 'next/document';
 
 export default function About() {
   const phraseAContainer = useRef(null);
@@ -16,6 +17,13 @@ export default function About() {
   const isAInView = useInView(phraseAContainer);
 
   return (
+    <>
+      <Head>
+        <title>Mahesh Paul | About</title>
+        <meta name="description" content="Mahesh Paul's Website Portfolio, About Page" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
     <Curve>
       <main className={styles.main}>
         <div className={styles.about}>
@@ -59,5 +67,6 @@ export default function About() {
         <Contact />
       </main>
     </Curve>
+    </>
   );
 }

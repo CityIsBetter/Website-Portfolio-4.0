@@ -107,8 +107,8 @@ const Contact: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Mahesh Paul | Contact | Portfolio</title>
-        <meta name="description" content="Website Portfolio Made by Mahesh Paul J." />
+        <title>Mahesh Paul | Contact</title>
+        <meta name="description" content="Website Portfolio Made by Mahesh Paul J. Contact Page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

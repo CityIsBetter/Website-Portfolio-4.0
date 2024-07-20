@@ -7,6 +7,7 @@ import Project from './project'
 import Magnetic from '@/components/Magnetic'
 import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { slideUp } from '@/components/anim/anim'
+import { Head } from 'next/document'
 
 export default function Projects() {
 
@@ -24,6 +25,13 @@ export default function Projects() {
   const x = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
+    <>
+      <Head>
+        <title>Mahesh Paul | Projects</title>
+        <meta name="description" content="Mahesh Paul's Website Portfolio, Home Page" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
     <Curve>
       <main className={styles.main}>
         <div className={styles.projects}>
@@ -62,5 +70,6 @@ export default function Projects() {
         <Contact />
       </main>
     </Curve>
+    </>
   )
 }
