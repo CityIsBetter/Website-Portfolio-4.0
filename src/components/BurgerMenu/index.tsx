@@ -30,7 +30,6 @@ export default function BurgerMenu() {
 
   useEffect(() => {
     if (!button.current) return;
-    console.log(button.current); // Check if button.current is correctly referenced
 
     gsap.registerPlugin(ScrollTrigger);
 
