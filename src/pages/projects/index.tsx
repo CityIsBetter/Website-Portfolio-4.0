@@ -60,7 +60,7 @@ export default function Projects() {
         </div>
       </main>
       <Project />
-      {/* <Contact /> */}
+      <Contact />
     </Curve>
   )
 }
