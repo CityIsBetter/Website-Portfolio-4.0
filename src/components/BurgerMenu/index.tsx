@@ -3,7 +3,6 @@ import styles from './style.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import Nav from '../Nav';
 import Magnetic from '../Magnetic';
-
 import { AnimatePresence } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -26,7 +25,7 @@ export default function BurgerMenu() {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
-  }, [pathname]);
+  }, [pathname, isActive]); // Include `isActive` in the dependency array
 
   useEffect(() => {
     if (!button.current) return;
@@ -69,7 +68,7 @@ export default function BurgerMenu() {
     return () => {
       trigger.scrollTrigger?.kill();
     };
-  }, [isActive]); // Include `isActive` in the dependency array
+  }, [isActive]);
 
   return (
     <>
