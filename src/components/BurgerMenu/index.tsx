@@ -25,7 +25,7 @@ export default function BurgerMenu() {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
-  }, [pathname, isActive]); // Include `isActive` in the dependency array
+  }, [pathname]); // Include `isActive` in the dependency array
 
   useEffect(() => {
     if (!button.current) return;
