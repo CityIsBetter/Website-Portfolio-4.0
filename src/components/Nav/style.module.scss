@@ -18,6 +18,7 @@
         justify-content: space-between;
         @media (max-width: 500px){
             padding: 50px;
+            justify-content: flex-start;
         }
 
         .nav{
@@ -50,6 +51,7 @@
         gap: 40px;
 
         @media (max-width: 500px){
+            margin-top: 100px;
             gap: 20px;
         }
         a{

@@ -103,6 +103,9 @@
                     z-index: 1000;
                     cursor: pointer;
                     transition: box-shadow 0.4s, background-color 0.4s;
+                    a{
+                        text-decoration: none;
+                    }
                     @media (max-width:500px) {
                         height: 120px;
                         width: 120px;

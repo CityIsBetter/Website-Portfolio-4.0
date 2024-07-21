@@ -36,6 +36,8 @@
             }
             .mockupContainer{
                 width: 500px;
+                display: flex;
+                justify-content: center;
                 .projectImg{
                     width: 500px;
                     height: 250px;
@@ -47,7 +49,7 @@
                     }
 
                     @media (max-width: 740px){
-                        width: 100%;
+                        width: 80vw;
                         height: 250px;
                     }
                 }    
@@ -85,6 +87,9 @@
                     @media (max-width: 1000px){
                         margin-top: 50px;
                     }
+                    @media (max-width: 740px){
+                        align-self: center;
+                    }
                     a{
                         text-decoration: none;
                         color: black;
@@ -107,6 +112,12 @@
                             &::after{
                                 width: 100%;
                             }
+                        }
+                        &:first-child{
+                            margin-left: 0;
+                        }
+                        @media (max-width: 740px){
+                            border-bottom: 2px solid #000;
                         }
                     }
                 }

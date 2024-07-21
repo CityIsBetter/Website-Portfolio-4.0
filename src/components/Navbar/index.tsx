@@ -10,6 +10,7 @@ const Navbar = () => {
 
   const [isActive, setIsActive] = useState(false);
   return (
+    <>
     <div className={styles.main}>
       <div className={styles.navbar}>
           <div className={styles.logo}>
@@ -33,15 +34,15 @@ const Navbar = () => {
                 <div className={styles.indicator}></div>
             </div></Magnetic>
           </div>
-          <Magnetic>
-              <div className={styles.menuButton} onClick={() => setIsActive(!isActive)}>
-                <div className={styles.el}>Menu<div className={styles.indicator}></div></div>
-              </div>
-            </Magnetic>
-            <AnimatePresence mode='wait'>
-            { isActive && <Nav close={() => setIsActive(false)} />}</AnimatePresence>
+          <div className={styles.menuButton} onClick={() => setIsActive(!isActive)}>
+            <div className={styles.el}>Menu<div className={styles.indicator}></div></div>
+          </div>
       </div>
+      <AnimatePresence mode='wait'>
+       { isActive && <Nav close={() => setIsActive(false)} />}
+    </AnimatePresence>
     </div>
+    </>
   )
 }
 

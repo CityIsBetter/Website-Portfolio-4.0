@@ -106,7 +106,7 @@ export default function Project() {
         offset: ["start end", "end start"]
     })
 
-    const height = useTransform(scrollYProgress, [0, 0.9], [50, 0]);
+    const height = useTransform(scrollYProgress, [0, 0.9], [50, 10]);
 
   return (
     <main ref={container} className={styles.main}>
