@@ -69,6 +69,7 @@ The website is optimized for performance, ensuring a fast and smooth user experi
 
 
 ![Caption: Performance Benchmark](https://i.imgur.com/NvAe0bJ.png)
+performance benchmark is low since pageInsight is not suited for websites with page transition and flag the transition as layout shift and reduce score.
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
