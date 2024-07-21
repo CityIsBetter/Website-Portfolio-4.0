@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/5cd80f58-200b-47d3-b144-39e003be7657)# My Portfolio Website
+# My Portfolio Website
 
 Welcome to my portfolio website repository. This website showcases my projects, skills, and experience, and it was built using Next.js 14 with animations implemented using Framer Motion and GSAP. I have also incorporated smooth page transitions using the Next.js page router. The project is developed with TypeScript and styled using SASS.
 
