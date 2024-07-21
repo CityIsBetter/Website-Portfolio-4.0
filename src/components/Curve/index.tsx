@@ -67,9 +67,10 @@ interface SVGProps {
 }
 
 const SVG = ({ height, width }: SVGProps) => {
+    const w = width > 768 ? 300 : 50;
     const initialPath = `
-        M0 300 
-        Q${width / 2} 0 ${width} 300
+        M0 ${w} 
+        Q${width / 2} 0 ${width} ${w}
         L${width} ${height + 300}
         Q${width / 2} ${height + 600} 0 ${height + 300}
         L0 0

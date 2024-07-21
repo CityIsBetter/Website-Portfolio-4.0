@@ -4,8 +4,7 @@ import styles from './style.module.scss';
 import { motion, useInView } from 'framer-motion';
 import Magnetic from '@/components/Magnetic';
 import Line from '@/components/Line';
-import { slideUp } from '@/components/anim/anim';
-import Image from 'next/image';
+import { slide, slideUp } from '@/components/anim/anim';
 import Resume from './Resume';
 import Contact from '@/components/Contact';
 import Head from 'next/head';
@@ -25,7 +24,13 @@ export default function About() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
     <Curve>
-      <main className={styles.main}>
+    <motion.main
+          className={styles.main}
+          initial="initial"
+          animate="open"
+          exit="closed"
+          variants={slide}
+        >
         <div className={styles.about}>
           <div className={styles.aboutContainer}>
             <div className={styles.heading}>About <span>Mahesh Paul</span></div>
@@ -65,7 +70,7 @@ export default function About() {
         </div>
         <Resume />
         <Contact />
-      </main>
+      </motion.main>
     </Curve>
     </>
   );

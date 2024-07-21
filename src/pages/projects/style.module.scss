@@ -17,8 +17,14 @@
         }
         .title{
             font-size: 96px;
-            color: white;
+            color: #333;
             width: 80%;
+            font-weight: 600;
+
+            span{
+                color: #fff;
+                font-weight: 300;
+            }
 
             @media (max-width: 768px){
                 margin-bottom: 50px;

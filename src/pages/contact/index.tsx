@@ -9,6 +9,7 @@ import styles from './style.module.scss';
 import Curve from '@/components/Curve';
 import Line from '@/components/Line';
 import Magnetic from '@/components/Magnetic';
+import { slide } from '@/components/anim/anim';
 
 interface Message {
   user_name: string;
@@ -113,7 +114,14 @@ const Contact: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Curve>
-        <main className={styles.contact}>
+      <motion.main
+          className={styles.contact}
+          ref={container}
+          initial="initial"
+          animate="open"
+          exit="closed"
+          variants={slide}
+        >
           <div className={styles.contactContainer} ref={container}>
             <div className={styles.Heading}>
               <div className={styles.Title}>Let&apos;s Have<br /> a Chat Together</div>
@@ -187,7 +195,7 @@ const Contact: React.FC = () => {
               </Magnetic>
             </div>
           </div>
-        </main>
+        </motion.main>
       </Curve>
       <ToastContainer
         position="bottom-right"

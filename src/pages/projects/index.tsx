@@ -6,7 +6,7 @@ import Contact from '@/components/Contact'
 import Project from './project'
 import Magnetic from '@/components/Magnetic'
 import { motion, useInView, useScroll, useTransform } from 'framer-motion'
-import { slideUp } from '@/components/anim/anim'
+import { slide, slideUp } from '@/components/anim/anim'
 import Head from 'next/head';
 
 export default function Projects() {
@@ -33,10 +33,17 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     <Curve>
-      <main className={styles.main}>
+    <motion.main
+          className={styles.main}
+          ref={container}
+          initial="initial"
+          animate="open"
+          exit="closed"
+          variants={slide}
+        >
         <div className={styles.projects}>
           <div className={styles.projectContainer} ref={container}>
-            <div className={styles.title}>My Projects</div>
+            <div className={styles.title}>My <span>Projects</span></div>
             <motion.div className={styles.buttonContainer} style={{x}}>
               <Magnetic>
                 <div className={styles.button}>
@@ -68,7 +75,7 @@ export default function Projects() {
         </div>
         <Project />
         <Contact />
-      </main>
+      </motion.main>
     </Curve>
     </>
   )
