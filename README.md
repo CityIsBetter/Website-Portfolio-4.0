@@ -1,40 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Portfolio Website
 
-## Getting Started
+Welcome to my portfolio website repository. This website showcases my projects, skills, and experience, and it was built using Next.js 14 with animations implemented using Framer Motion and GSAP. I have also incorporated smooth page transitions using the Next.js page router. The project is developed with TypeScript and styled using SASS.
 
-First, run the development server:
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Performance Insights](#performance-insights)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+
+- **Next.js 14**: The latest version of Next.js provides server-side rendering and static site generation.
+- **Framer Motion**: Used for implementing animations for various elements.
+- **GSAP**: Used for complex animations and transitions.
+- **Page Transitions**: Smooth transitions between pages using the Next.js page router.
+- **TypeScript**: Ensures type safety and better developer experience.
+- **SASS**: Used for writing clean and maintainable CSS.
+- **Responsive Design**: Fully responsive and works on all devices.
+- **SEO Optimized**: Basic SEO optimization for better search engine ranking.
+
+## Technologies Used
+
+- [Next.js 14](https://nextjs.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [GSAP](https://greensock.com/gsap/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [SASS](https://sass-lang.com/)
+- [CSS Modules](https://github.com/css-modules/css-modules)
+
+## Installation
+
+To get started with this project, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/your-username/portfolio-website.git
+cd portfolio-website
+npm install
+```
+
+## Usage
+To start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Screenshots
+Here are some screenshots of the website:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+![Home Page](https://i.imgur.com/1nzEaBi.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![Projects Page](https://i.imgur.com/2d7fcjV.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+![Contact Page](https://i.imgur.com/9lE3UmR.png)
 
-To learn more about Next.js, take a look at the following resources:
+![SideBar](https://i.imgur.com/jo5zVqK.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Performance Insights
+The website is optimized for performance, ensuring a fast and smooth user experience. Below are the performance benchmarks:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+![Caption: Performance Benchmark](https://i.imgur.com/NvAe0bJ.png)
+performance benchmark is low since pageInsight is not suited for websites with page transition and flag the transition as layout shift and reduce score.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or new features.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/CityIsBetter/Website-Portfolio-4.0/blob/main/LICENSE) file for details.
