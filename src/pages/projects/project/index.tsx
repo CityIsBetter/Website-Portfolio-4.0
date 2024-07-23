@@ -64,7 +64,7 @@ export default function Project() {
     {
       Title: "Tetris",
       Desc: "This project is a recreation of the game Tetris in Python using Pygame library!",
-      Mockup: '/assets/Tetris.png',
+      Mockup: '/assets/tetris.png',
       Lang: "python",
       Blog: "",
       Github: "https://github.com/CityIsBetter/Tetris-pygame",
