@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import styles from './style.module.scss'
 import Image from 'next/image'
-import { blob } from 'stream/consumers'
 import Magnetic from '@/components/Magnetic'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
@@ -11,7 +10,7 @@ export default function Project() {
       Title: "NoteScape",
       Desc: "NoteScape is a powerful note-taking app featuring bulletins, to-dos, image uploads, and an AI assistant. Built with Next.js 14, Firebase, Vercel Blob, and Novel.sh, it offers seamless sync across devices and a rich editing experience.",
       Mockup: '/assets/NoteScape.png',
-      Lang: "next ts sass firebase",
+      Lang: "next ts sass node firebase",
       Blog: "https://medium.com/@mahesh.paul.j/notescape-building-the-ultimate-note-taking-app-with-ai-and-seamless-sync-6fc92f0e6249",
       Github: "https://github.com/CityIsBetter/NoteScape",
       Site: "https://notescape.vercel.app/",
@@ -20,7 +19,7 @@ export default function Project() {
       Title: "AcademiaHUB",
       Desc: "AcademiaHUB: Bunk management, Reminders, and CGPA calculator. Your all-in-one website, seamlessly connected to your Google account for on-the-go accessibility.",
       Mockup: '/assets/academiaHub.png',
-      Lang: "react js css firebase",
+      Lang: "react js css node firebase",
       Blog: "https://medium.com/@mahesh.paul.j/creating-academiahub-a-comprehensive-student-companion-81d9c2186299",
       Github: "https://github.com/CityIsBetter/AcademiaHUB",
       Site: "https://academiahub.netlify.app/",
@@ -38,7 +37,7 @@ export default function Project() {
       Title: "Old Portfolio",
       Desc: "This is my old website portfolio made using reactJS and Sanity and hosted in Netlify!",
       Mockup: '/assets/portfolio 2.0.png',
-      Lang: "react js sass",
+      Lang: "react js node sass",
       Blog: "",
       Github: "https://github.com/CityIsBetter/Portfolio",
       Site: "https://maheshpaul.netlify.app/",
@@ -83,7 +82,7 @@ export default function Project() {
       Title: "ViewTubee",
       Desc: "This project is a YouTube Clone - ViewTubee Made using Youtube's own API.",
       Mockup: '/assets/viewtubee.png',
-      Lang: "react js css",
+      Lang: "react js node css",
       Blog: "",
       Github: "https://github.com/CityIsBetter/ViewTube",
       Site: "https://viewtubee.netlify.app/",

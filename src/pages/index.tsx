@@ -9,6 +9,42 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { slide } from "@/components/anim/anim";
 
+import Router from 'next/router';
+
+export const fixTimeoutTransition = (timeout: number): void => {
+  Router.events.on('beforeHistoryChange', () => {
+    // Query all relevant <style> and <link> elements
+    const nodes: NodeListOf<HTMLLinkElement | HTMLStyleElement> = document.querySelectorAll('link[rel=stylesheet], style:not([media=x])');
+    
+    // Clone the nodes and cast them as an array of HTMLElements
+    const copies: HTMLElement[] = Array.from(nodes).map((el) => el.cloneNode(true) as HTMLElement);
+
+    // Modify the cloned nodes and append them to the document head
+    copies.forEach((copy) => {
+      copy.removeAttribute('data-n-p');
+      copy.removeAttribute('data-n-href');
+      document.head.appendChild(copy);
+    });
+
+    const handler = () => {
+      Router.events.off('routeChangeComplete', handler);
+
+      window.setTimeout(() => {
+        // Remove the cloned nodes after the transition
+        copies.forEach((copy) => {
+          document.head.removeChild(copy);
+        });
+      }, timeout);
+    };
+
+    Router.events.on('routeChangeComplete', handler);
+  });
+};
+
+// Usage
+fixTimeoutTransition(1500);
+
+
 export default function Home() {
   const container = useRef(null);
 

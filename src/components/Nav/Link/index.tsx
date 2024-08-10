@@ -2,6 +2,7 @@ import styles from './style.module.scss';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { slide, scale } from '../../BurgerMenu/anim';
+import Magnetic from '@/components/Magnetic';
 
 export default function RLink({data, isActive, setSelectedIndicator, Click} : {data: any, isActive: boolean, setSelectedIndicator: any, Click: any}) {
   
@@ -22,7 +23,7 @@ export default function RLink({data, isActive, setSelectedIndicator, Click} : {d
           animate={isActive ? "open" : "closed"} 
           className={styles.indicator}>
         </motion.div>
-        <Link href={href} onClick={Click}>{title}</Link>
+         <Magnetic><Link href={href} onClick={Click}>{title}</Link></Magnetic>
       </motion.div>
     )
 }
