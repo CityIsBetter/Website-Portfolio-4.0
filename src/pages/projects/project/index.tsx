@@ -10,7 +10,7 @@ export default function Project() {
       Title: "NoteScape",
       Desc: "NoteScape is a powerful note-taking app featuring bulletins, to-dos, image uploads, and an AI assistant. Built with Next.js 14, Firebase, Vercel Blob, and Novel.sh, it offers seamless sync across devices and a rich editing experience.",
       Mockup: '/assets/NoteScape.png',
-      Lang: "next ts sass node firebase",
+      Lang: "next ts tailwind node firebase",
       Blog: "https://medium.com/@mahesh.paul.j/notescape-building-the-ultimate-note-taking-app-with-ai-and-seamless-sync-6fc92f0e6249",
       Github: "https://github.com/CityIsBetter/NoteScape",
       Site: "https://notescape.vercel.app/",
