@@ -2,7 +2,8 @@ import React, { useRef } from 'react'
 import styles from './style.module.scss'
 import Image from 'next/image'
 import Magnetic from '@/components/Magnetic'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useInView, useScroll, useTransform } from 'framer-motion'
+import { slideUp } from '@/components/anim/anim'
 
 export default function Project() {
   const projects = [
@@ -99,6 +100,9 @@ export default function Project() {
   ]
 
   const container = useRef(null);
+  const prjRef = useRef(null);
+
+  const isPrjInView = useInView(prjRef);
 
     const { scrollYProgress } = useScroll({
         target: container,
@@ -109,10 +113,10 @@ export default function Project() {
 
   return (
     <main ref={container} className={styles.main}>
-      <div className={styles.projectContainer}>
+      <div className={styles.projectContainer} ref={prjRef}>
         {
           projects.map((project, index) => {
-            return <div className={styles.project} key={index}>
+            return <motion.div className={styles.project} key={index}  variants={slideUp} custom={index} animate={isPrjInView ? "open" : "closed"}>
                       <div className={styles.mockupContainer}><Image src={project.Mockup} alt='project mockup' className={styles.projectImg} width={1280} height={720}/></div>
                       <div className={styles.content}>
                         <div className="">
@@ -122,9 +126,10 @@ export default function Project() {
                         <div className={styles.lang}>
                           {
                             project.Lang.split(" ").map((lang, index) => {
-                              return <Magnetic key={index}>
+                              return (
+                              <Magnetic key={index}>
                                 <Image src={`/assets/${lang}.png`} alt='language logo' width={48} height={48}/>
-                              </Magnetic>
+                              </Magnetic>)
                             })
                           }
                         </div>
@@ -134,7 +139,7 @@ export default function Project() {
                           {project.Site && <Magnetic><a href={project.Site} target='_blank'>Site</a></Magnetic>}
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
           })
         }
       </div>

@@ -48,7 +48,7 @@
                             inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
                             inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2),
                             0px 0px 0px 2px rgba(255, 255, 255, 0.2),
-                            0px 0px 90px 0px #334bd362;
+                            0px 0px 90px 0px #334bd37f;
 
                 background: linear-gradient(0deg,#455CE9,#334BD3);
                 background-color: #455CE9;
@@ -93,7 +93,8 @@
                 color: #fff;
                 scale: 1.1;
                 border-color: white;
-                box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+                box-shadow: 0 0px 20px rgba(193, 163, 98,0.4),
+                0px 0px 90px 0px #334bd37f;
               }
               
               &:active {

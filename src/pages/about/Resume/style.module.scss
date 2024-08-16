@@ -50,19 +50,37 @@
             .subTitle{
                 font-size: 24px;
             }
-            table{
-                margin: 12px 0 50px 0;
-                width: 100%;
-                font-size: 24px;
-                @media (max-width: 700px){
-                    font-size: 18px;
-                }
-                @media (max-width: 560px){
-                    font-size: 14px;
-                }
-                tr{
-                    word-wrap: break-word;
-                    overflow-wrap: break-word;
+            .columnContainer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 24px 0;
+                .column{
+                    p{
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        font-size: 24px;
+                        color: black;
+                        font-weight: 400;
+        
+                        @media (max-width: 500px){
+                            font-size: 24px;
+                        }
+                        &:nth-of-type(1){
+                            gap: 8px;
+                  
+                            span{
+                                margin-right: 3px;
+                            }
+                  
+                            .mask{
+                                position: relative;
+                                overflow: hidden;
+                                display: inline-flex;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -98,7 +116,7 @@
                             inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
                             inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2),
                             0px 0px 0px 2px rgba(255, 255, 255, 0.2),
-                            0px 0px 90px 0px #334BD3;
+                            0px 0px 90px 0px #334bd37f;
                 background: linear-gradient(0deg,#455CE9,#334BD3);         
               }
         }        

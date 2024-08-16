@@ -1,6 +1,6 @@
 'use client';
 import styles from './style.module.scss';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Nav from '../Nav';
 import Magnetic from '../Magnetic';
 import { AnimatePresence } from 'framer-motion';
@@ -25,56 +25,41 @@ export default function BurgerMenu() {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
-  }, [pathname]); // Include `isActive` in the dependency array
+  }, [pathname]);
 
-  useEffect(() => {
-    if (!button.current) return;
-
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-
-    const trigger = gsap.fromTo(
-      button.current,
-      { scale: 0, autoAlpha: 0 },
-      {
-        scale: 1,
-        autoAlpha: 1,
-        duration: 0.25,
-        ease: 'power1.out',
-        scrollTrigger: {
-          trigger: document.documentElement,
-          start: 'top top',
-          end: '+=200',
-          scrub: true,
-          onEnterBack: () => {
-            gsap.to(button.current, {
-              scale: 0,
-              autoAlpha: 0,
-              duration: 0.25,
-              ease: 'power1.out'
-            });
-            setIsActive(false);
-          },
-          onLeave: () =>
-            gsap.to(button.current, {
-              scale: 1,
-              autoAlpha: 1,
-              duration: 0.25,
-              ease: 'power1.out'
-            })
-        }
-      }
-    );
-
-    return () => {
-      trigger.scrollTrigger?.kill();
-    };
-  }, [isActive]);
+  
+    gsap.to(button.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        start: 0,
+        end: 200,
+        onLeave: () => {
+          gsap.to(button.current, {
+            scale: 1,
+            duration: 0.25,
+            ease: "power1.out",
+          });
+        },
+        onEnterBack: () => {
+          gsap.to(button.current, {
+            scale: 0,
+            duration: 0.25,
+            ease: "power1.out",
+          });
+          setIsActive(false); // Call setIsActive separately
+        },
+      },
+    });
+  }, []);
+  
 
   return (
     <>
       <div
         onClick={() => setIsActive(!isActive)}
-        className={styles.buttonContainer}
+        className={styles.burgerContainer}
         ref={button}
       >
         <Rounded>
