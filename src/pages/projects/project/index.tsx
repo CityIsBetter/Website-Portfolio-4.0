@@ -35,6 +35,15 @@ export default function Project() {
       Site: "",
     },
     {
+      Title: "Prompt2Shorts",
+      Desc: "Prompt2Shorts is an application that takes prompts and generate full scripts, voice-over audio, and relevant videos. Designed for creators who want to quickly produce engaging content, Prompt2Shorts integrates advanced AI and APIs to automate the creation process.",
+      Mockup: '/assets/prompt2shorts.png',
+      Lang: "next ts tailwind node",
+      Blog: "",
+      Github: "https://github.com/CityIsBetter/Prompt2Shorts",
+      Site: "https://prompt2shorts.vercel.app",
+    },
+    {
       Title: "Old Portfolio",
       Desc: "This is my old website portfolio made using reactJS and Sanity and hosted in Netlify!",
       Mockup: '/assets/portfolio 2.0.png',
@@ -71,15 +80,6 @@ export default function Project() {
       Site: "",
     },
     {
-      Title: "Canvas",
-      Desc: "This is Canvas made using pure HTML, CSS, Javascript. This is similar to Paint but in website!",
-      Mockup: '/assets/canvas.gif',
-      Lang: "html js css",
-      Blog: "",
-      Github: "https://github.com/CityIsBetter/canvas",
-      Site: "",
-    },
-    {
       Title: "ViewTubee",
       Desc: "This project is a YouTube Clone - ViewTubee Made using Youtube's own API.",
       Mockup: '/assets/viewtubee.png',
@@ -90,7 +90,7 @@ export default function Project() {
     },
     {
       Title: "Weather App",
-      Desc: "This project is a weather app made using html, css, javascript. This is dependent on openweathermap API",
+      Desc: "This project is a weather app made using html, css, javascript. This is dependent on OpenWeatherMap API",
       Mockup: '/assets/weather.png',
       Lang: "html js css",
       Blog: "",
