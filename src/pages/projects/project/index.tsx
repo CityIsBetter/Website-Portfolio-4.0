@@ -118,20 +118,23 @@ export default function Project() {
           projects.map((project, index) => {
             return <motion.div className={styles.project} key={index}  variants={slideUp} custom={index} animate={isPrjInView ? "open" : "closed"}>
                       <div className={styles.mockupContainer}><Image src={project.Mockup} alt='project mockup' className={styles.projectImg} width={1280} height={720}/></div>
+                      
                       <div className={styles.content}>
-                        <div className="">
-                          <p className={styles.title}>{project.Title}</p>
-                          <p className={styles.desc}>{project.Desc}</p>
-                        </div>
-                        <div className={styles.lang}>
-                          {
-                            project.Lang.split(" ").map((lang, index) => {
-                              return (
-                              <Magnetic key={index}>
-                                <Image src={`/assets/${lang}.png`} alt='language logo' width={48} height={48}/>
-                              </Magnetic>)
-                            })
-                          }
+                        <div className={styles.contentWrapper}>
+                          <div className="">
+                            <p className={styles.title}>{project.Title}</p>
+                            <p className={styles.desc}>{project.Desc}</p>
+                          </div>
+                          <div className={styles.lang}>
+                            {
+                              project.Lang.split(" ").map((lang, index) => {
+                                return (
+                                <Magnetic key={index}>
+                                  <Image src={`/assets/${lang}.png`} alt='language logo' width={48} height={48}/>
+                                </Magnetic>)
+                              })
+                            }
+                          </div>
                         </div>
                         <div className={styles.links}>
                           {project.Blog && <Magnetic><a href={project.Blog} target='_blank'>Blog</a></Magnetic>}
