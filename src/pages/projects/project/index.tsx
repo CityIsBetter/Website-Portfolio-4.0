@@ -17,6 +17,14 @@ export default function Project() {
       Site: "https://notescape.vercel.app/",
     },
     {
+      Title: "ResumeItNow",
+      Desc: "ResumeItNow is a free, open-source resume builder that helps job seekers create professional resumes without watermarks or hidden fees. Built with modern technologies and powered by AI, it offers a seamless experience for creating ATS-friendly resumes.",
+      Mockup: '/assets/resumeitnow.png',
+      Lang: "next ts tailwind node firebase",
+      Github: "https://github.com/CityIsBetter/ResumeItNow",
+      Site: "https://resumeitnow.vercel.app/",
+    },
+    {
       Title: "AcademiaHUB",
       Desc: "AcademiaHUB: Bunk management, Reminders, and CGPA calculator. Your all-in-one website, seamlessly connected to your Google account for on-the-go accessibility.",
       Mockup: '/assets/academiaHub.png',
