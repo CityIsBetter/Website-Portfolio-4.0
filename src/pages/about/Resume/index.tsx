@@ -16,9 +16,9 @@ const sData = [
 ];
 
 const cData = [
-  ["Python for Data Science", "Programming in Java", "Introduction to Database System", "AWS Certified Machine Learning", "Digital Image Processing", "Computer Vision Essentials", "Image Processing Onramp", "MATLAB Onramp"],
-  ["NPTEL", "NPTEL", "NPTEL", "Amazon Web Services", "Great Learning", "Great Learning", "MathWorks", "MathWorks"],
-  ["2023", "2023", "2024", "2024", "2024", "2024", "2024", "2024"]
+  ["Python for Data Science", "Programming in Java", "Introduction to Database System", "Introduction to Machine Learning", "AWS Certified Machine Learning", "Digital Image Processing", "Computer Vision Essentials", "Image Processing Onramp", "MATLAB Onramp"],
+  ["NPTEL", "NPTEL", "NPTEL", "NPTEL", "Amazon Web Services", "Great Learning", "Great Learning", "MathWorks", "MathWorks"],
+  ["2023", "2023", "2024", "2024","2024", "2024", "2024", "2024", "2024"]
 ]
 ;
 
