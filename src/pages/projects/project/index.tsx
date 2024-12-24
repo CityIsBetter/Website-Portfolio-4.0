@@ -25,6 +25,14 @@ export default function Project() {
       Site: "https://resumeitnow.vercel.app/",
     },
     {
+      Title: "BoardScape",
+      Desc: "A modern, real-time collaborative whiteboard application built with Next.js 14, enabling teams to visualize ideas and work together seamlessly.",
+      Mockup: '/assets/boardscape.png',
+      Lang: "next ts tailwind node convex clerk liveblocks",
+      Github: "https://github.com/CityIsBetter/BoardScape",
+      Site: "https://boardscape.vercel.app/",
+    },
+    {
       Title: "AcademiaHUB",
       Desc: "AcademiaHUB: Bunk management, Reminders, and CGPA calculator. Your all-in-one website, seamlessly connected to your Google account for on-the-go accessibility.",
       Mockup: '/assets/academiaHub.png',
@@ -88,15 +96,6 @@ export default function Project() {
       Site: "",
     },
     {
-      Title: "ViewTubee",
-      Desc: "This project is a YouTube Clone - ViewTubee Made using Youtube's own API.",
-      Mockup: '/assets/viewtubee.png',
-      Lang: "react js node css",
-      Blog: "",
-      Github: "https://github.com/CityIsBetter/ViewTube",
-      Site: "https://viewtubee.netlify.app/",
-    },
-    {
       Title: "Weather App",
       Desc: "This project is a weather app made using html, css, javascript. This is dependent on OpenWeatherMap API",
       Mockup: '/assets/weather.png',
@@ -138,7 +137,7 @@ export default function Project() {
                               project.Lang.split(" ").map((lang, index) => {
                                 return (
                                 <Magnetic key={index}>
-                                  <Image src={`/assets/${lang}.png`} alt='language logo' width={48} height={48}/>
+                                  <Image src={`/assets/${lang}.png`} alt={`${lang} logo`} width={48} height={48}/>
                                 </Magnetic>)
                               })
                             }
